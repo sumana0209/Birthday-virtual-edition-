@@ -1,0 +1,12 @@
+{
+  "name": "birthday-pre-celebration",
+  "version": "1.0.0",
+  "description": "Pre-birthday celebration website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

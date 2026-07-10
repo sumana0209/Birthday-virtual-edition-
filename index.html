@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise For You ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="animationCanvas"></canvas>
+
+    <div id="lock-screen" class="screen active">
+        <div class="card">
+            <h2>🎂 A Special Surprise Awaits...</h2>
+            <p>Hint: What does she call you or a special nickname? (You set this to "Mumma")</p>
+            <input type="password" id="password-input" placeholder="Enter Password...">
+            <button onclick="checkPassword()">Unlock 🔑</button>
+            <p id="login-error" style="color: red; display: none;">Oops! That's not the password. Try again! ❤️</p>
+        </div>
+    </div>
+
+    <div id="main-content" class="screen">
+        
+        <div class="audio-controls">
+            <audio id="bg-music" src="maskara.mpeg" loop></audio>
+            <button id="music-toggle" onclick="toggleMusic()">🎵 Play Music</button>
+        </div>
+
+        <header>
+            <h1 class="typewriter">Hey Mumma... Something special is coming! ✨</h1>
+            <div id="countdown-box">
+                <h3>Time Left Until Your Big Day:</h3>
+                <div id="countdown" data-date="2026-07-21T00:00:00">00d 00h 00m 00s</div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Our Favorite Moments 💖</h2>
+            <div class="slideshow-container">
+                <div class="slide fade"><img src="1.jpg" alt="Gorgeous"><p class="caption">You have a timeless kind of beauty that's impossible to ignore</p></div>
+                <div class="slide fade"><img src="2.jpg" alt="Stunning"><p class="caption">You have an elegant charm that's both graceful and captivating.</p></div>
+                <div class="slide fade"><img src="3.jpg" alt="Attractive"><p class="caption">Always making me laugh no matter what.</p></div>
+	<div class="slide fade"><img src="4.jpg" alt="Mesmerizing"><p class="caption">Every time I see you, you somehow look even more beautiful than before</p></div>
+                <div class="slide fade"><img src="5.jpg" alt="Captivating"><p class="caption">The best adventures are always with you.</p></div>
+                <div class="slide fade"><img src="6.jpg" alt="Enchanting"><p class="caption">You make beautiful look effortless..</p></div>
+	 <div class="slide fade"><img src="7.jpg" alt="Heavenly"><p class="caption">You're like a masterpiece—beautiful in every little detail</p></div>
+                <div class="slide fade"><img src="8.jpg" alt="Angelic"><p class="caption">Your eyes have a way of saying a thousand beautiful things.</p></div>
+                <div class="slide fade"><img src="9.jpg" alt="Flawless"><p class="caption">There's something incredibly classy and beautiful about you.</p></div>
+	 <div class="slide fade"><img src="10.jpg" alt="Memory 1"><p class="caption">Some people shine because of the light around them; you shine because the light seems to come from you</p></div>
+                <div class="slide fade"><img src="11.jpeg" alt="Memory 2"><p class="caption">You have the kind of beauty that makes time slow down.</p></div>
+                <div class="slide fade"><img src="12.jpeg" alt="Memory 3"><p class="caption">Your eyes tell the most beautiful stories.</p></div>
+ 	<div class="slide fade"><img src="13.jpeg" alt="Memory 1"><p class="caption">You have a heart that's just as beautiful as your smile.</p></div>
+                <div class="slide fade"><img src="14.jpeg" alt="Memory 2"><p class="caption">The more I know you, the more beautiful you become.</p></div>
+                <div class="slide fade"><img src="15.jpeg" alt="Memory 3"><p class="caption">Some people wear beauty; you embody it.</p></div>
+
+
+
+
+
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>The Photo Wall 📌</h2>
+            <div class="polaroid-wall">
+                <div class="polaroid">
+                    <img src="16.jpg" alt="Wall 1">
+                    <div class="container"><p>Charming🌟</p></div>
+                </div>
+                <div class="polaroid">
+                    <img src="17.jpg" alt="Wall 2">
+                    <div class="container"><p>Unstoppable ☕</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Our Journey ⏳</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content"><h3>2018 - How We Met</h3><p>The universe decided I needed an amazing friend.</p></div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content"><h3>2026 - Peak Chaos</h3><p>Now you become my mumma forever.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>A Quick Surprise Scratch-Card 🎁</h2>
+            <div class="scratch-container">
+                <div class="scratch-base">You win 1000x virtual hugs and a lifetime subscription to my bad jokes! 🤗❤️</div>
+                <canvas id="scratch-canvas" width="300" height="150"></canvas>
+            </div>
+            <p style="font-size: 0.9rem; color: #888;">Scratch the gray area with your mouse or finger!</p>
+        </section>
+
+        <section class="section">
+            <h2>Tap the Gift Box! 🎁</h2>
+            <div class="gift-container" onclick="openGift()">
+                <div id="gift-box">🎁</div>
+                <div id="gift-message" class="hidden">
+                    <h3>Surprise! 🎉</h3>
+                    <p>You are one of the most genuine, beautiful souls I know. I'm so lucky to have you in my life. Let's make this year incredible!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Messages Just For You 💌</h2>
+	<h3>Capturing your silly things is very favourite thing for me 💌</h3>
+            <div class="media-box">
+                <h3>Watch This:</h3>
+                <video controls width="100%" poster="">
+                    <source src="Bidipta.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <h3>Listen to This:</h3>
+                <audio controls src="voice.mp3" style="width: 100%; margin-top: 10px;"></audio>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
